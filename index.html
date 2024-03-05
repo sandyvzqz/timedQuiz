@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <section id="scoreBoard" style="display: none">
+            <button type="button"> View Highscore </button>
+            <p>Score:<span id="score"></span></p>
+        </section>
+        <section id="countdownTimer" style="display: none">
+            <div>Time Left : <span id="timer"></span></div>
+        </section>
+    </header>
+
+    <!-- Container for the beginning of coding quiz, hidden after quiz starts -->
+    <container>
+    <div id="startContainer">
+        <h1>Timed Coding Quiz</h1>
+        <p>Try to answer the following code-related questions within the time provided.</p> 
+        <p>Incorrectly answered questions will be penalized with a 10 second time deduction.</p>
+        <p>Best of luck!</p>
+        <br>
+        <button type="button" id="start-btn">Start Quiz</button>
+    </div>
+    </container>
+
+    <!-- Container for coding questions, hidden until quiz starts -->
+    <container id="quizContainer" style="display: none">
+        <h2 id="quizQuestion"></h2>
+            <div>
+                <ul id="multipleChoice">
+                    <div>
+                        <button id="answerChoice1"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoice2"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoice3"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoice4"></button>
+                    </div>
+                </ul>
+            </div>
+    </container>
+</body>
+<!-- Saved user answer choices -->
+<section id="userChoice"></section>
+
+<!-- Container for final quiz score, hidden until quiz is completed -->
+    <div id="quizComplete" style="display: none">
+        <h1>Quiz Complete!</h1>
+        <p>Your final score is<span id="finalScore"></span>.</p>
+        <div>
+            <input type="text" id="initials" value="Enter Initials:">
+            <button type="submit" onclick="submitScore()">Submit</button>
+        </div>
+    </div>
+
+    <!-- container for saved high scores, hidden until user initials are submitted -->
+    <div id="highScores" style="display: none">
+        <h1>Highscores</h1>
+        <div>
+            <button type="button" onclick="restartQuiz()">Go back</button>
+            <button type="reset" onclick="resetScores()">Clear high scores</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</html>
