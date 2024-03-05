@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+*{
+    font-family: "Acme";
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+container{
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+button{
+    background-color: rgb(152, 185, 213);
+    color: aliceblue;
+    border-radius: .5rem;
+    padding: .3rem;
+    font-size: 1rem;
+}
+
+button:hover{
+    color: white;
+    background-color: rgb(96, 154, 204);
+}
+
+#countdownTimer{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+
+
